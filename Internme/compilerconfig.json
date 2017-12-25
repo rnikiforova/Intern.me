@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "ClientApp/app/components/joblisting/joblistings.component.css",
+    "inputFile": "ClientApp/app/components/joblisting/joblistings.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/components/joblisting/joblisting.add.component.css",
+    "inputFile": "ClientApp/app/components/joblisting/joblisting.add.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/components/student/student.profile.component.css",
+    "inputFile": "ClientApp/app/components/student/student.profile.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/components/employer/employer.profile.component.css",
+    "inputFile": "ClientApp/app/components/employer/employer.profile.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/components/employer/employer.profile.edit.component.css",
+    "inputFile": "ClientApp/app/components/employer/employer.profile.edit.component.scss"
+  }
+]

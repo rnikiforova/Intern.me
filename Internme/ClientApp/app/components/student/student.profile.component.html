@@ -1,0 +1,46 @@
+﻿<div class="container-fluid">
+    <div class="row" *ngIf="student">
+        <div class="col-lg-12">
+            <h1>{{ student.firstName }} {{ student.lastName}}, Фак. № {{ student.facultyNumber }}</h1>
+            <div class="col-lg-2">
+                <img src="https://78.media.tumblr.com/cda7297d60cdf1e7ced132b1d7cf00e0/tumblr_ovqmiiLngE1vec7qzo1_400.jpg" width="200" height="200"/>
+            </div>
+            <div class="col-lg-10">
+                <form [formGroup]="studentData" (ngSubmit)="onSubmit(studentData)">
+                    <div class="col-lg-12">
+                        <span>Име:</span>
+                        <div class="col-lg-5 input-group">
+                            <input type="text" class="form-control" formControlName="firstName" />
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <span>Фамилия:</span>
+                        <div class="col-lg-5 input-group">
+                            <input type="text" class="form-control" formControlName="lastName" />
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <span>Успех:</span>
+                        <div class="col-lg-5 input-group">
+                            <input type="number" class="form-control" formControlName="gpa" />
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <span>Ниво на образование:</span>
+                        <div class="col-lg-5 input-group">
+                            <input type="text" class="form-control" formControlName="educationLevel" />
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-5 input-group">
+                            <br />
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Запази промените</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+﻿.row {
+    overflow: hidden;
+}
+
+body {
+    background: red;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 0 10px 10px 10px;
+    margin-bottom: 10px;
+}
+
+.card-info-top {
+    background: #dec12d;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.card-info {
+    margin-bottom: 10px;
+    padding-left: 0;
+}

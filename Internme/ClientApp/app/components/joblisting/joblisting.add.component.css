@@ -1,0 +1,7 @@
+﻿.input-group {
+  padding-bottom: 10px; }
+  .input-group textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 200px; }
+

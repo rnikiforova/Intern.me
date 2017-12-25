@@ -1,0 +1,80 @@
+﻿<h1>Публикувай обява</h1>
+
+<form [formGroup]="jobListing" (ngSubmit)="onSubmit(jobListing)">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="col-lg-12">
+                    <label>Категория: </label>
+                    <div class="col-lg-12 input-group">
+                        <select formControlName="category" class="form-control">
+                            <option value="0">Administrative</option>
+                            <option value="1">Finance</option>
+                            <option value="2">Marketing</option>
+                            <option value="3">Advertising</option>
+                            <option value="4">IT</option>
+                            <option value="5">Banking</option>
+                            <option value="6">Consulting</option>
+                            <option value="7">DataAnalysis</option>
+                            <option value="8">Law</option>
+                            <option value="9">Other
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label>Ниво на образование: </label>
+                    <div class="col-lg-12 input-group">
+                        <select formControlName="educationLevel" class="form-control">
+                            <option value="0">Завършен I курс</option>
+                            <option value="1">Завършен II курс</option>
+                            <option value="2">Завършен III курс</option>
+                            <option value="3">Бакалавър</option>
+                            <option value="4">Магистър</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label>Продължителност: </label>
+                    <div class="col-lg-12 input-group">
+                        <select formControlName="period" class="form-control">
+                            <option value="0">1 месец</option>
+                            <option value="1">До 3 месеца</option>
+                            <option value="2">До 6 месеца</option>
+                            <option value="3">До 1 година</option>
+                            <option value="4">Над 1 година</option>
+                            <option value="5">Друго</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label>Работно време: </label>
+                    <div class="col-lg-12 input-group">
+                        <select formControlName="schedule" class="form-control">
+                            <option value="0">Пълно работно време</option>
+                            <option value="1">Непълно работно време</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label>Заплащане: </label>
+                    <div class="col-lg-12 input-group">
+                        <input type="number" class="form-control" formControlName="salary"/>
+                        <span class="input-group-addon">лв</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="col-lg-12">
+                    <label>Text</label>
+                    <div class="col-lg-12 input-group">
+                        <textarea formControlName="text"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Публикувай</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

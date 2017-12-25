@@ -1,0 +1,50 @@
+﻿<div class="container-fluid">
+    <div class="row" *ngIf="employer">
+        <h1>{{ employer.name }}</h1>
+        <form [formGroup]="employerData" class="col-lg-8">
+            <div class="col-lg-12">
+                <span>Наименование:</span>
+                <div class="col-lg-5 input-group">
+                    <input type="text" class="form-control" formControlName="name" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <span>Кратко описание:</span>
+                <div class="col-lg-5 input-group">
+                    <input type="text" class="form-control" formControlName="about" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <span>Сфера на дейност:</span>
+                <div class="col-lg-5 input-group">
+                    <input type="text" class="form-control" formControlName="category" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <span>Email:</span>
+                <div class="col-lg-5 input-group">
+                    <input type="text" class="form-control" formControlName="email" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <span>Адрес:</span>
+                <div class="col-lg-5 input-group">
+                    <input type="text" class="form-control" formControlName="address" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <span>Уебсайт:</span>
+                <div class="col-lg-5 input-group">
+                    <input type="text" class="form-control" formControlName="website" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <span>LinkedIn:</span>
+                <div class="col-lg-5 input-group">
+                    <input type="text" class="form-control" formControlName="linkedIn" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
