@@ -28,17 +28,12 @@ export class ApplicationService {
             .map((response) => response.json());
     }
 
-    create(app: Application) {
-        let appRes = <Application>{};
-
+    create(app: Application) : Observable<Application> {
         let headers = new Headers();
         headers.append('Accept', 'application/json');
         headers.append('Content-Type', 'application/json');
-
-        // TODO: fixcv
-        app.cvId = 1;
-        console.log(JSON.stringify(app));
-        let ob = this.http.post(`${this.SERVICE_URL}`, JSON.stringify(app), { headers: headers })
-            .subscribe(res => appRes = res.json());
+        app.publishedOn = new Date();
+        return this.http.post(`${this.SERVICE_URL}`, JSON.stringify(app), { headers: headers })
+            .map(res => res.json());
     }
 }

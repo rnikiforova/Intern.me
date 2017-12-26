@@ -1,0 +1,27 @@
+﻿<div class="container-fluid">
+    <div class="row" *ngIf="studentCvs">
+        <h1>Кандидатсване по обява № {{jobListingId}}</h1>
+        <div class="col-lg-5">
+            <div class="col-lg-8">
+            <label>Избери CV: </label>
+                <form [formGroup]="applicationData" (ngSubmit)="onSubmit(studentCvs)">
+                    <div class="col-lg-12 input-group">
+                        <select formControlName="cvId" class="form-control">
+                            <option *ngFor="let studentCv of studentCvs"
+                                    [value]="studentCv.id">{{studentCv.text}}</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Изпрати</button>
+                </form>
+            
+            <div class="alert alert-success" role="alert" *ngIf="application">
+                <p><i class="fa fa-check" aria-hidden="true"></i>  Кандидатурата е изпратена успешно!</p>
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="error">
+                <p><i class="fa fa-exclamation" aria-hidden="true"></i>  {{error}}</p>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>

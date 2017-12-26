@@ -6,4 +6,6 @@ export interface Application {
     jobListingId: number;
     jobListing: JobListing;
     cvId: number;
+    studentId: number;
+    text: string;
 }

@@ -10,7 +10,7 @@ export class StudentService {
     private BASE_URL: string;
     private SERVICE_URL: string = "api/Students";
 
-    private jobListings: IStudent[] = [];
+    private students: IStudent[] = [];
 
     constructor(private http: Http) {
     }

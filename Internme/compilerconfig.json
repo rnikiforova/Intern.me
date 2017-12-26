@@ -18,5 +18,9 @@
   {
     "outputFile": "ClientApp/app/components/employer/employer.profile.edit.component.css",
     "inputFile": "ClientApp/app/components/employer/employer.profile.edit.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/components/application/application.add.component.css",
+    "inputFile": "ClientApp/app/components/application/application.add.component.scss"
   }
 ]

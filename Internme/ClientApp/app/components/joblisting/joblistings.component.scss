@@ -8,12 +8,13 @@ body {
 
 .card {
     border: 1px solid #ddd;
-    padding: 0 10px 10px 10px;
+    padding: 5px 25px 25px 25px;
     margin-bottom: 10px;
+    background: #fff;
 }
 
 .card-info-top {
-    background: #dec12d;
+    border-bottom: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
 }

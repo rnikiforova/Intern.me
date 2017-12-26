@@ -5,7 +5,7 @@ import { ICv } from '../models/cv.model';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class StudentService {
+export class CvService {
     private BASE_URL: string;
     private SERVICE_URL: string = "api/CVs";
 
@@ -25,8 +25,8 @@ export class StudentService {
         return this.http.get(`${this.SERVICE_URL}/${id}`).map(res => res.json());
     }
 
-    getByStudent(id: number): Observable<ICv> {
-        return this.http.get(`${this.SERVICE_URL}/studentId=${id}`).map(res => res.json());
+    getByStudent(id: number): Observable<ICv[]> {
+        return this.http.get(`${this.SERVICE_URL}/studentId=${id}`).map(this.mapAll.bind(this));
     }
 
     getDir(): string {

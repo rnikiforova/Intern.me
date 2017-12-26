@@ -34,21 +34,21 @@ namespace Internme.Controllers
 
         // GET: api/CVs
         [HttpGet("studentId={studentId}")]
-        public async Task<IActionResult> GetCvByStudentId([FromRoute]int studentId)
+        public IEnumerable<CV> GetCvByStudentId([FromRoute]int studentId)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return new CV[0];
             }
 
-            var cV = await _context.Cvs.SingleOrDefaultAsync(m => m.StudentId == studentId);
+            var cVs = _context.Cvs.Where(m => m.StudentId == studentId);
 
-            if (cV == null)
+            if (cVs == null)
             {
-                return NotFound();
+                return new CV[0];
             }
 
-            return Ok(cV);
+            return cVs;
         }
 
         // GET: api/CVs/5

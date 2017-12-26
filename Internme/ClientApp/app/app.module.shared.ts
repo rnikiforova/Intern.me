@@ -11,10 +11,12 @@ import { JobListingsComponent } from './components/joblisting/joblistings.compon
 import { JobListingAddComponent } from './components/joblisting/joblisting.add.component';
 import { StudentProfileComponent } from './components/student/student.profile.component';
 import { EmployerProfileComponent } from './components/employer/employer.profile.component';
+import { ApplicationAddComponent } from './components/application/application.add.component';
 import { JobListingService } from './services/joblisting.service';
 import { StudentService } from './services/student.service';
 import { EmployerService } from './services/employer.service';
 import { ApplicationService } from './services/application.service';
+import { CvService } from './services/cv.service';
 import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
@@ -26,6 +28,7 @@ import { CounterComponent } from './components/counter/counter.component';
         JobListingAddComponent,
         StudentProfileComponent,
         EmployerProfileComponent,
+        ApplicationAddComponent,
         HomeComponent
     ],
     imports: [
@@ -41,6 +44,7 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'joblistings-add', component: JobListingAddComponent },
             { path: 'student-profile', component: StudentProfileComponent },
             { path: 'employer-profile/:id', component: EmployerProfileComponent },
+            { path: 'application-add/:jobListingId', component: ApplicationAddComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ],
@@ -48,7 +52,8 @@ import { CounterComponent } from './components/counter/counter.component';
         JobListingService,
         EmployerService,
         ApplicationService,
-        StudentService
+        StudentService,
+        CvService
     ]
 })
 export class AppModuleShared {

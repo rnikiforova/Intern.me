@@ -1,25 +1,32 @@
-﻿<h1>Обяви</h1>
-<div class="container-fluid">
+﻿<div class="container-fluid">
     <div class="row">
+        <h1>Обяви</h1>
         <div *ngFor="let jobListing of jobListings" class="card">
             <div class="card-body row">
-                <div class="col-lg-12 card-info-top" *ngIf="jobListing.employer">Публикувана от <a [routerLink]="['/employer-profile/', jobListing.employer.id]">{{ jobListing.employer?.name }}</a> на <i class="fa fa-calendar-o" aria-hidden="true"></i> 23.12.2017</div>
+                <div class="col-lg-12 card-info-top" *ngIf="jobListing.employer">Публикувана от <a [routerLink]="['/employer-profile/', jobListing.employer.id]">{{ jobListing.employer?.name }}</a> на <i class="fa fa-calendar-o" aria-hidden="true"></i> 23.12.2017
+                </div>
                 <div class="col-lg-12 card-info">
                     <div class="col-lg-3">
-                        <div><i class="fa fa-eur fa-fw" aria-hidden="true"></i> Заплащане: {{ jobListing.salary }}</div>
-                        <div><i class="fa fa-tag fa-fw" aria-hidden="true"></i> Категория: {{ jobListing.categoryName }}</div>
-                        <div><i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i> Продължителност: {{ jobListing.periodName }}</div>
+                        <div><i class="fa fa-eur fa-fw" aria-hidden="true"></i> Заплащане: {{ jobListing.salary }}
+                        </div>
+                        <div><i class="fa fa-tag fa-fw" aria-hidden="true"></i> Категория: {{ jobListing.categoryName }}
+                        </div>
+                        <div><i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i> Продължителност: {{ jobListing.periodName }}
+                        </div>
                     </div>
                     <div class="col-lg-4">
-                        <div><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i> Работно време: {{ jobListing.scheduleName }}</div>
-                        <div><i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i> Ниво на образование: {{ jobListing.educationLevelName }}</div>
-                        <div><i class="fa fa-globe fa-fw" aria-hidden="true"></i> Езици: Английски</div>
+                        <div><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i> Работно време: {{ jobListing.scheduleName }}
+                        </div>
+                        <div><i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i> Ниво на образование: {{ jobListing.educationLevelName }}
+                        </div>
+                        <div><i class="fa fa-globe fa-fw" aria-hidden="true"></i> Езици: Английски
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-12">
-                Text:
-                <div [innerHTML]="jobListing.text"></div> <br/>
-                    <button type="button" (click)="apply(jobListing.id)">Apply</button>
+                    Text:
+                    <div [innerHTML]="jobListing.text"></div> <br/>
+                    <button type="button" (click)="apply(jobListing.id)" class="btn btn-primary">Apply</button>
                 </div>
             </div>
         </div>

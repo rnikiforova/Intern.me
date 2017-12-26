@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\application\application.add.component.ts" />
     <None Remove="ClientApp\app\components\employer\employer.profile.component.ts" />
     <None Remove="ClientApp\app\components\joblisting\joblisting.add.component.ts" />
     <None Remove="ClientApp\app\components\joblisting\joblistings.component.ts" />
@@ -46,6 +47,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\application\application.add.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\employer\employer.profile.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\employer\employer.profile.edit.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\joblisting\joblisting.add.component.ts" />

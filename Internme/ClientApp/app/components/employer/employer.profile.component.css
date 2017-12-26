@@ -1,1 +1,12 @@
-﻿
+﻿.card {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc; }
+
+.card-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee; }
+
+.social-network-link {
+  font-size: 2em; }
+

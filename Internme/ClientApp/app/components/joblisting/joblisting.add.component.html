@@ -3,7 +3,7 @@
 <form [formGroup]="jobListing" (ngSubmit)="onSubmit(jobListing)">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 form-card">
                 <div class="col-lg-12">
                     <label>Категория: </label>
                     <div class="col-lg-12 input-group">
@@ -58,14 +58,10 @@
                 <div class="col-lg-12">
                     <label>Заплащане: </label>
                     <div class="col-lg-12 input-group">
-                        <input type="number" class="form-control" formControlName="salary"/>
+                        <input type="number" class="form-control" formControlName="salary" />
                         <span class="input-group-addon">лв</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
                 <div class="col-lg-12">
                     <label>Text</label>
                     <div class="col-lg-12 input-group">
@@ -73,8 +69,18 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Публикувай</button>
+                    <br/>
+                </div>
+                <div class="col-lg-12">
+                    <div class="alert alert-success" role="alert" *ngIf="sentJobListing">
+                        <p><i class="fa fa-check" aria-hidden="true"></i>  Обявата е публикувана успешно!</p>
+                    </div>
+                    <div class="alert alert-danger" role="alert" *ngIf="error">
+                        <p><i class="fa fa-exclamation" aria-hidden="true"></i>  {{error}}</p>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </form>
